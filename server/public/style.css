@@ -1,0 +1,43 @@
+body {
+  background-color: rgb(210, 210, 210);
+}
+
+.main-header {
+  display: flex;
+  justify-content: center;
+}
+
+.login {
+  display: flex;  
+  flex-direction: column;
+  align-items: center;
+}
+
+.login h2 {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+hr {
+  margin: 0;
+  margin-bottom: 1rem;
+  border: 0.5rem solid rgb(0, 0, 0);
+}
+
+.nav-bar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav-bar a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.5rem;
+}

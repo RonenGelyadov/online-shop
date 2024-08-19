@@ -1,0 +1,16 @@
+<%- include("partials/header.ejs") %>
+
+<div class="login">
+  <% if (locals.comment) { %>
+    <h2><%= comment %></h2>
+  <% } else { %>
+    <h2>Please log in</h2>
+  <% } %>
+  <form action="/login-server" method="post">
+    <label for="password">Enter password:</label>
+    <input type="password" name="password" required="true">
+    <button type="submit">Log in</button>
+  </form>
+</div>
+
+<%- include("partials/footer.ejs") %>
