@@ -7,6 +7,11 @@ body {
   justify-content: center;
 }
 
+.main-header a {
+  color: black;
+  text-decoration: none;
+}
+
 .login {
   display: flex;  
   flex-direction: column;
@@ -40,4 +45,9 @@ hr {
   text-decoration: none;
   color: black;
   font-size: 1.5rem;
+}
+
+.products-container {
+  border: 1px solid black;
+  margin: 1rem 2rem;
 }

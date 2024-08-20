@@ -1,3 +1,21 @@
 <%- include("partials/header.ejs") %>
-Products
+
+<div>
+  <div class="products-head main-header">
+    <h2>Products</h2>
+  </div>
+  <div class="products-filter">
+
+  </div>
+  <div class="products-container">
+     <% if (locals.products && locals.products.lenght > 0) { %>
+      <% products.forEach(product => { %>
+        <h4><%= product.name %></h4>
+      <% }); %>
+     <% } else { %>
+        <h3 class="warning main-header">No products found</h3>
+     <% } %>
+  </div>
+</div>
+
 <%- include("partials/footer.ejs") %>
