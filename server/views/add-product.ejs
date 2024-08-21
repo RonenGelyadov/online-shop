@@ -1,0 +1,33 @@
+<%- include("partials/header.ejs") %>
+
+<div class="products-head main-header">
+  <h2>Add Product</h2>
+</div>
+
+<div class="add-form">
+  <% if (locals.comment) { %>
+      <h4><%= comment %></h4>
+  <% } %>
+  <form action="/add-product" method="post">
+    <input type="text" name="name" autocomplete="off" required="true" placeholder="Product name...">
+    <br>
+    <select name="category">
+      <option value="none">Product category...</option>
+      <% if (locals.categories) { %>
+        <% categories.forEach(category => { %>
+            <option value="<%= category.name %>"><%= category.name %></option>
+        <% }); %>
+      <% } %>
+    </select>
+    <br>
+    <input type="number" name="price" autocomplete="off" placeholder="Product price...">
+    <br>
+    <input type="number" name="stock" autocomplete="off" placeholder="Product stock...">
+    <br>
+    <textarea name="description" cols="50" rows="10" placeholder="Product description..."></textarea>
+    <br>
+    <button type="submit">Add</button>
+  </form>
+</div>
+
+<%- include("partials/footer.ejs") %>

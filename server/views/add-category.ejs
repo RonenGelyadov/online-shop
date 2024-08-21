@@ -1,0 +1,18 @@
+<%- include("partials/header.ejs") %>
+
+<div class="products-head main-header">
+  <h2>Add Category</h2>
+</div>
+
+<div class="add-form">
+  <% if (locals.comment) { %>
+      <h4><%= comment %></h4>
+  <% } %>
+  <form action="/add-category" method="post">
+    <input type="text" name="name" required="true" autocomplete="off" placeholder="Category name...">
+    <br>
+    <button type="submit">Add</button>
+  </form>
+</div>
+
+<%- include("partials/footer.ejs") %>

@@ -5,15 +5,32 @@
     <h2>Products</h2>
   </div>
   <div class="products-filter">
-
+    <a href="/add-product"><button>Add Product</button></a>
+    <a href="/add-category"><button>Add Category</button></a>
   </div>
   <div class="products-container">
-     <% if (locals.products && locals.products.lenght > 0) { %>
+     <% if (locals.products) { %>
       <% products.forEach(product => { %>
-        <h4><%= product.name %></h4>
+        <div class="product">
+          <div class="product-details">
+            <h6><span class="bold">ID:</span> <%= product.id %></h6>
+            <h6><span class="bold">Name:</span> <%= product.name %></h6>
+            <h6><span class="bold">Category:</span> <%= product.category %></h6>
+            <h6><span class="bold">Price:</span> <%= product.price %></h6>
+            <h6><span class="bold">Stock:</span> <%= product.stock %></h6>
+            <h6><span class="bold">Description:</span> <%= product.description %></h6>
+          </div>
+          <div class="product-buttons">
+            <button>Edit</button>
+            <form action="/delete-product" method="post">
+              <input type="text" name="id" value="<%= product.id %>" hidden>
+              <button type="submit">Delete</button>
+            </form>
+          </div>
+        </div>
       <% }); %>
      <% } else { %>
-        <h3 class="warning main-header">No products found</h3>
+        <h4 class="warning main-header">No products found</h4>
      <% } %>
   </div>
 </div>

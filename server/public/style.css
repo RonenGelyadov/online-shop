@@ -48,6 +48,17 @@ hr {
 }
 
 .products-container {
-  border: 1px solid black;
   margin: 1rem 2rem;
+}
+
+.product {
+  border: 1px solid black;
+  border-radius: 2rem;
+  padding: 1rem 2rem;
+  margin: 1rem 0rem;
+}
+
+.bold {
+  font-weight: bold;
+  text-decoration: underline;
 }
