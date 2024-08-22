@@ -12,7 +12,7 @@
     <input type="text" name="name" autocomplete="off" required="true" placeholder="Product name...">
     <br>
     <select name="category">
-      <option value="none">Product category...</option>
+      <option value="none">Product category . . . </option>
       <% if (locals.categories) { %>
         <% categories.forEach(category => { %>
             <option value="<%= category.name %>"><%= category.name %></option>
@@ -20,13 +20,13 @@
       <% } %>
     </select>
     <br>
-    <input type="number" name="price" autocomplete="off" placeholder="Product price...">
+    <input type="number" name="price" step="any" autocomplete="off" placeholder="Product price...">
     <br>
     <input type="number" name="stock" autocomplete="off" placeholder="Product stock...">
     <br>
     <textarea name="description" cols="50" rows="10" placeholder="Product description..."></textarea>
     <br>
-    <button type="submit">Add</button>
+    <button class="add-btn special-btn" type="submit">Add</button>
   </form>
 </div>
 

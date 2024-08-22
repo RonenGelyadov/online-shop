@@ -20,7 +20,11 @@ const db = new pg.Client({
   port: process.env.DB_PORT,
 });
 
-db.connect();
+try {
+  await db.connect();
+} catch (err) {
+  console.log (`Error connecting to DB: ${err.message}`);
+}
 
 server.use(express.json());
 server.use(express.static("public"));
